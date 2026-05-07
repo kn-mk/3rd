@@ -30,4 +30,20 @@ aの燃料 = 9950.0
 
 (putSpec()は正常に動作していることがわかる。また、移動が成功した後は総走行距離が増えており、getMileage()含め、新たに追加したmileageフィールドもうまく機能していることがわかる。)
 
+
+・meikai12-2
+(Account.java) 銀行口座クラス【第2版】教科書ソースコードより作成。また、39行目にgetTotalBalance()を記述した。
+(TimeAccount.java) 定期預金付き銀行口座クラス【第1版】教科書ソースコードより作成。また、24行目にgetTotalBalance()を記述し、28行目にcompBalanceを記述した。
+(TimeAccountTesterEx12.java) Accountクラスのa,bとTimeAccountクラスのc,dを作る。次に、Accountクラス同士、AccountクラスとTimeAccountクラス、TimeAccountクラス同士のすべてのパターンで、クラスメソッドcompBalanceが正しく動くかを確認させる。
+
+java TimeAccountTesterEx12.java 
+a vs b
+1
+a vs c
+0
+c vs d
+-1
+(Accountクラス同士、AccountクラスとTimeAccountクラス、TimeAccountクラス同士のすべてのパターンで正しく動作している)
+
 [考察]
+TimeAccountクラスに関して、普通の預金と定期預金の合計を出すために、getBalance() + timeBalanceとしていたが、TimeAccountクラスの場合にしか正しく動かないため、新たにgetTotalBalance()を作成することで解決した。
