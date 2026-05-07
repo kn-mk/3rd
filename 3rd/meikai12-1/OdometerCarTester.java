@@ -6,8 +6,17 @@ public class OdometerCarTester {
         a.putSpec();
         //走行距離 
         System.out.println("aの走行距離 = " + a.getMileage());
-    
-        a.move(10, 10);
+        System.out.println("aの燃料 = " + a.getFuel());
+
+        System.out.println("ーー移動ーー");
+        a.move(30, 40);
+
+        System.out.println("aの走行距離 = " + a.getMileage());
+        System.out.println("aの燃料 = " + a.getFuel());
+
+        System.out.println("ーー移動ーー");
+        a.move(10000,10000);
+        
         System.out.println("aの走行距離 = " + a.getMileage());
         System.out.println("aの燃料 = " + a.getFuel());
     }
