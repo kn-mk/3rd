@@ -1,6 +1,6 @@
 // 定期預金付き銀行口座クラス【第1版】TimeAccountを書く
 
-class TimeAccount {
+class TimeAccount extends Account{
 	private long timeBalance;				// 預金残高（定期預金）
 
 	// コンストラクタ
@@ -18,5 +18,23 @@ class TimeAccount {
 	void cancel() {
 		deposit(timeBalance);
 		timeBalance = 0;
+	}
+
+	//以下より記述
+	long getTotalBalance() {
+		return getBalance() + timeBalance;
+	}
+
+	static int compBalance(Account a, Account b) {
+		long aBalance = a.getTotalBalance();
+		long bBalance = b.getTotalBalance(); 
+		
+		if(aBalance > bBalance) {
+			return 1;
+		} else if(aBalance == bBalance){
+			return 0;
+		} else{
+			return -1;
+		}
 	}
 }
