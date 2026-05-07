@@ -35,4 +35,9 @@ class Account {
 	void withdraw(long k) {
 		balance -= k;
 	}
+
+	//以下を新たに記述
+	long getTotalBalance() {
+		return balance;
+	}
 }
