@@ -1,19 +1,21 @@
 //VirtPlotGraphのサブクラスのSinVPGraphクラスを書く
 
-public class SinVPGraph ???{
+public class SinVPGraph extends VirtPlotGraph{
 
 	protected int t;
 
-	public SinVPGraph(???, int t){
-		super(???);
-		??? = t;
+	public SinVPGraph(char symbol, int t){
+		super(symbol);
+		this.t = t;
 	}
 
-	public int getT(){ ??? }
-	public void setT(???){ ??? }
+	public int getT(){ return t; }
+	public void setT(int t){ this.t = t; }
 
 	@Override public void computeY(){
-		setY(???);
+		//振幅:Y_MAX
+		int y = (int)(Math.sin(2 * Math.PI * getX() / t) * Y_MAX);
+		setY(y);
 	}
 
 }
