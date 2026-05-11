@@ -1,13 +1,16 @@
 // SinVPGraphのサブクラスのSawToothVPGraphクラスを書く
 
-public class SawToothVPGraph ???{
+public class SawToothVPGraph extends SinVPGraph{
 
-	public SawToothVPGraph(???, int t){
-		???(???, t);
+	public SawToothVPGraph(char symbol, int t){
+		super(symbol, t);
 	}
 
 	@Override public void computeY(){
-		setY(???);
+		//x = tのとき、1周期おわり
+		int y = getX()% t;
+		y *= xRange / t;
+		setY(y);
 	}
 
 }

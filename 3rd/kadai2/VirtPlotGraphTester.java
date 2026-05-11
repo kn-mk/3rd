@@ -8,14 +8,14 @@ class VirtPlotGraphTester{
 
 		VirtPlotGraph virtPlotGraphs[] = {
 			new VirtPlotGraph('1'),
-			new SinVPGraph('2', xRange),
-			new ???('3', xRange),
+			new SinVPGraph('2', xRange / 2),
+			new SawToothVPGraph('3', xRange / 2),
 		};
 
 		for(int x = 0;x <= xRange;x++){
 			VirtPlotGraph.clear();
-			VirtPlotGraph.setX(???);
-			for(int i = 0;i < virtPlotGraphs.???;i++){
+			VirtPlotGraph.setX(x);
+			for(int i = 0;i < virtPlotGraphs.length;i++){
 				virtPlotGraphs[i].computeY();
 				virtPlotGraphs[i].plot();
 			}
