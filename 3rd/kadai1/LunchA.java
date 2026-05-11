@@ -8,8 +8,8 @@ public class LunchA{
 
   public LunchA(String curry, int pCurry){
      order = ++count;
-     this.??? = curry;
-     this.??? = pCurry;
+     this.curry = curry;
+     this.pCurry = pCurry;
   }
 
   public String name() { return curry; }
