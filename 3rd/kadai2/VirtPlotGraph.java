@@ -1,5 +1,4 @@
 // VirtPlotGraphクラスを書く
-
 public class VirtPlotGraph{
 
 	public static final int Y_MAX = 10;
